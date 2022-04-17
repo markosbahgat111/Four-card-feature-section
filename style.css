@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.main_container{
+    width: 80%;
+    height: fit-content;
+    padding: 5em 0;
+
+}
+.header_container{
+    margin: auto;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.header_container span{
+    color: hsl(234, 12%, 34%);
+    font-size: 30px;
+    font-weight: lighter;
+}
+.header_container h1{
+    color: hsl(234, 12%, 34%);
+}
+.header_container p{
+    color: hsl(229, 6%, 66%);
+    width: 40%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.cards_container{
+    display: grid;
+    min-height: 550px;
+    height: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    grid-template-rows:  repeat(auto-fill,  1fr);
+    margin:auto 2em;
+}
+.cards_container section{
+    background-color: white;
+    border-top: 5px solid;
+    position: relative;
+    box-shadow: 0 5px 10px hsla(234, 12%, 34%, 0.3);
+    padding: 2em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cards_container section p{
+    color: hsl(229, 6%, 66%);
+}
+.cards_container section h2{
+    color: hsl(234, 12%, 34%);
+}
+.cards_container section img{
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+
+}
+.cards_container section.team{
+    border-color: hsl(0, 78%, 62%);
+
+}
+.cards_container section.calc{
+    border-color: hsl(212, 86%, 64%);
+    height: 280px;
+    grid-row: span 2;
+    margin: auto;
+}
+.cards_container section.karma{
+    border-color: hsl(34, 97%, 64%);
+    grid-column: 2/3;
+    grid-row: 2;
+}
+.cards_container section.supervisor{
+    border-color: hsl(180, 62%, 55%);
+    height: 280px;
+    grid-row: span 2;
+    margin: auto;
+}
+
+@media screen and (max-width:1250px){
+    .cards_container section.supervisor{
+        border-color: hsl(180, 62%, 55%);
+        height: auto;
+        grid-row: auto;
+        margin: 0;
+    }
+    .cards_container section.calc{
+        border-color: hsl(212, 86%, 64%);
+        height: auto;
+        grid-row: auto;
+        margin: 0;
+    }
+}
+@media screen and (max-width:850px){
+    .main_container{
+        width: 90%;
+        height: fit-content;
+        padding: 5em 0;
+    }
+    .cards_container{
+        display: grid;
+        min-height: 1200px;
+        height: fit-content;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        grid-template-rows:  repeat(auto-fit,  minmax(280px, 1fr));
+        margin:auto 0.5em;
+    }
+    .cards_container section.karma{
+        border-color: hsl(34, 97%, 64%);
+        grid-column: auto;
+      
+    }
+    .cards_container section.calc{
+        border-color: hsl(212, 86%, 64%);
+        height: auto;
+        grid-row: 4;
+        margin: 0;
+    }
+    .header_container p{
+        color: hsl(229, 6%, 66%);
+        width: 90%;
+        margin: auto;
+        margin-top: 1em;
+    }
+    .header_container span{
+        color: hsl(234, 12%, 34%);
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .header_container h1{
+        color: hsl(234, 12%, 34%);
+        font-size: 25px;
+    }
+}
